@@ -1,14 +1,13 @@
 import { useState } from 'react';
 // import { useLocation } from 'react-router-dom';
 import { Dialog, DialogPanel } from '@headlessui/react';
+import { IconX, IconAlignRight } from '@tabler/icons-react';
 import {
-  IconX,
-  IconAlignRight,
-  IconBrandWhatsapp,
-  IconBrandGoogleFilled,
-  IconBrandInstagram,
-} from '@tabler/icons-react';
-import { LinkPageDataLeft, LinkPageDataRight, LinkPageDataFull } from './DataMenu';
+  LinkPageDataLeft,
+  LinkPageDataRight,
+  LinkPageDataFull,
+  FooterNavigation,
+} from './DataMenu';
 
 const navigationLeft = LinkPageDataLeft;
 const navigationRight = LinkPageDataRight;
@@ -106,10 +105,12 @@ const HeaderPage = () => {
               </a>
             ))}
           </div>
-          <div className="flex flex-row justify-center items-center mt-8 gap-1 text-kin-textsecondary max-w-xs mx-auto">
-            <IconBrandInstagram className="w-7 h-7" />
-            <IconBrandGoogleFilled className="w-7 h-7" />
-            <IconBrandWhatsapp className="w-7 h-7" />
+          <div className="flex flex-row justify-center items-center mt-8 gap-3 text-kin-textsecondary max-w-xs mx-auto">
+            {FooterNavigation.social.map((item, idx) => (
+              <a key={idx} href={item.href}>
+                {item.icon_mobile}
+              </a>
+            ))}
           </div>
         </DialogPanel>
       </Dialog>

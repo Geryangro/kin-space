@@ -1,4 +1,4 @@
-import { IconBrandWhatsapp, IconBrandGoogleFilled, IconBrandInstagram } from '@tabler/icons-react';
+import { FooterNavigation } from './DataMenu';
 
 export default function FooterPage() {
   return (
@@ -14,9 +14,13 @@ export default function FooterPage() {
           </div>
         </div>
         <div className="flex flex-row justify-around gap-2 text-kin-text">
-          <IconBrandInstagram className="w-6 h-6" />
-          <IconBrandGoogleFilled className="w-6 h-6" />
-          <IconBrandWhatsapp className="w-6 h-6" />
+          {FooterNavigation.social.map((item, idx) => {
+            return (
+              <a href={item.href} key={idx}>
+                {item.icon}
+              </a>
+            );
+          })}
         </div>
         <div className="flex flex-1 justify-end">
           <a
