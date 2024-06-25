@@ -7,6 +7,7 @@ import React from 'react';
 
 import Home from 'pages/Home';
 import About from 'pages/About'
+import Contact from 'pages/Contact';
 // import Blog from 'pages/public/Home/Blog';
 // import BlogDetails from 'pages/public/Home/BlogDetails';
 // import Faq from 'pages/public/Home/Faq';
@@ -17,7 +18,8 @@ import About from 'pages/About'
 
 const publicRoutes = [
     { path: '/', element: <Home /> },
-    { path: '/about', element: <About /> }
+    { path: '/about', element: <About /> },
+    { path: '/contact', element: <Contact /> }
     //   { path: '/blog', element: <Blog /> },
     //   { path: '/blog/:id', element: <BlogDetails /> },
     //   { path: '/faq', element: <Faq /> },

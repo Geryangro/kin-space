@@ -31,16 +31,16 @@ const LinkPageDataLeft = [
 ]
 
 const LinkPageDataRight = [
-    { name: "About Kin", href: "/about" },
-    { name: "Contact Us", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
 ]
 
 const LinkPageDataFull = [
     { name: "Shop", href: "/" },
     { name: "Play", href: "/" },
     { name: "Learn", href: "/" },
-    { name: "About Kin", href: "/about" },
-    { name: "Contact Us", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
 ]
 
 const FooterNavigation = {
@@ -49,7 +49,7 @@ const FooterNavigation = {
         {
             name: "Instagram",
             href: "https://www.instagram.com/kinspace.id",
-            icon: <IconBrandInstagram className="w-6 h-6" />,
+            icon: <IconBrandInstagram className="w-[26px] h-[26px]" />,
             icon_mobile: <IconBrandInstagram className="w-8 h-8" />,
         },
         {
@@ -60,7 +60,7 @@ const FooterNavigation = {
         },
         {
             name: "Whatsapp",
-            href: "#",
+            href: "https://api.whatsapp.com/send?phone=6287776886880&text=Hello Kin Space,I would like to ask you a few questions about your place?",
             icon: <IconBrandWhatsapp className="w-6 h-6" />,
             icon_mobile: <IconBrandWhatsapp className="w-8 h-8" />,
         },

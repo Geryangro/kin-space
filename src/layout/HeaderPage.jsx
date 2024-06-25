@@ -1,47 +1,47 @@
 import { useState } from 'react';
-// import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Dialog, DialogPanel } from '@headlessui/react';
-import { IconX, IconAlignRight } from '@tabler/icons-react';
+import { IconX, IconAlignLeft } from '@tabler/icons-react';
 import {
-  LinkPageDataLeft,
+  // LinkPageDataLeft,
   LinkPageDataRight,
   LinkPageDataFull,
   FooterNavigation,
 } from './DataMenu';
 
-const navigationLeft = LinkPageDataLeft;
+// const navigationLeft = LinkPageDataLeft;
 const navigationRight = LinkPageDataRight;
 const navigationFull = LinkPageDataFull;
 
 const HeaderPage = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  // const location = useLocation();
+  const location = useLocation(); // Get the current location
 
-  // const goToLogin = () => {
-  //   window.location.href = 'https://loanly-front.pages.dev/login';
-  // };
+  const isActive = (href) => (location.pathname === href ? 'text-primary-main font-basicbold' : '');
 
   return (
     <header>
       <nav className="hidden md:flex items-center justify-between py-3 md:px-8" aria-label="Global">
         <div className="flex flex-1">
-          <div className="hidden md:flex md:gap-x-12">
+          {/* <div className="hidden md:flex md:gap-x-12">
             {navigationLeft.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="xl:text-sm text-base font-basicsemibold leading-6 text-kin-text">
+                className={`xl:text-sm text-base font-basicsemibold leading-6 text-kin-text hover:text-kin-textdark hover:font-basicbold ${isActive(
+                  item.href,
+                )}`}>
                 {item.name}
               </a>
             ))}
-          </div>
+          </div> */}
           <div className="flex md:hidden">
             <button
               type="button"
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
               onClick={() => setMobileMenuOpen(true)}>
               <span className="sr-only">Open main menu</span>
-              <IconAlignRight className="h-6 w-6" aria-hidden="true" />
+              <IconAlignLeft className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
         </div>
@@ -55,7 +55,9 @@ const HeaderPage = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="xl:text-sm text-base font-basicsemibold leading-6 text-kin-text">
+                className={`xl:text-sm text-base font-basicsemibold leading-6 text-kin-text hover:text-kin-textdark hover:font-basicbold ${isActive(
+                  item.href,
+                )}`}>
                 {item.name}
               </a>
             ))}
@@ -67,7 +69,7 @@ const HeaderPage = () => {
         aria-label="Global">
         <a href="/" className="">
           <span className="sr-only">Your Company</span>
-          <img className="h-9 w-auto" src="kin/assest/logo.png" alt="" />
+          <img className="h-9 w-auto" src="kin/assest/svg-logo.svg" alt="" />
         </a>
         <div className="flex">
           <button
@@ -75,13 +77,13 @@ const HeaderPage = () => {
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-kin-text"
             onClick={() => setMobileMenuOpen(true)}>
             <span className="sr-only">Open main menu</span>
-            <IconAlignRight className="h-9 w-9" aria-hidden="true" />
+            <IconAlignLeft className="h-9 w-9" aria-hidden="true" />
           </button>
         </div>
       </nav>
       <Dialog className="md:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
-        <DialogPanel className="fixed top-0 left-0 right-0 z-30 w-full overflow-y-auto bg-primary-main px-6 pt-6 pb-12 rounded-br-[80px]">
+        <DialogPanel className="fixed top-0 left-0 right-0 z-30 w-full overflow-y-auto bg-primary-main px-6 pt-3 pb-12 rounded-br-[80px]">
           <div className="flex items-center justify-between">
             <a href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>

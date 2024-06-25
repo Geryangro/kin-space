@@ -1,18 +1,14 @@
 import FullLayout from "layout/FullLayout"
 
 const About = () => {
-    const data = `Welcome to KIN Space! We're thrilled to have you here. Nestled in the heart of Jakarta, 
-    our space is all about sparking imagination and fostering learning through play. 
-    KIN, which stands for Kids Nusantara, is a celebration of Indonesia's rich cultural heritage, designed to captivate young minds and nurture their well-being.
+    const data = `KiN is an ode to Nusantara, where Indonesia’s rich culture inspires the space, activity and the brand’s roots. 
+    It is our mission to captivate young minds and nurture well-being through Indonesian culture. 
+    We blend education with imagination, offering a gateway to explore the wonders of Nusantara.
     </br>
     </br>
-    At KIN Space, we believe that the best learning happens through experience. 
-    That's why our blend of exhibitions, interactive activities, and educational play is crafted to make every visit an adventure. 
-    We’re passionate about creating an inclusive, welcoming environment where every child feels inspired and free to explore their creativity.
-    </br>
-    </br>
-    Come join us at KIN Space, where your child's curiosity and imagination can truly soar. 
-    Let's learn, play, and discover the wonders of Indonesia's diverse heritage together.`
+    KiN Space is located in SCBD Park, Jakarta. This family space offers a unique blend of exhibition, play, learning, gallery-retail, and also a cozy cafe. 
+    We also have an additional space for all to enjoy, and that is our reading space. 
+    It is a little nook where kids can play and enjoy free reading time.`
 
 
     return (
@@ -46,18 +42,19 @@ const About = () => {
                 <div className="w-full h-full relative flex items-center md:px-[80px] px-[40px]">
                     <div className=" overflow-hidden">
                         <div className="text-left animate__animated animate__fadeInUp xl:pb-0">
-                            <h1 className="text-left font-basicbold text-xl text-kin-text max-w-md leading-[normal] mb-7">
-                                Igniting your child’s
-                                imagination
+                            <h1 className="text-left font-basicbold text-xl text-kin-text max-w-lg leading-[normal] mb-7">
+                                KiN is short for Kids Nusantara
                             </h1>
                             <span className="font-basicregular text-kin-text 2xl:max-w-xl xl:max-w-lg block" dangerouslySetInnerHTML={{ __html: data }} />
-                            <button className="mt-4 py-1 px-3.5 bg-secondary-main text-white rounded-3xl text-sm mx-auto">
-                                Contact Us
-                            </button>
+                            <a href="/contact">
+                                <button className="mt-4 py-1 px-3.5 bg-secondary-main text-white rounded-3xl text-sm mx-auto">
+                                    Contact Us
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div className="h-[40px]" />
+                <div className="h-[40px] lg:hidden block" />
             </div>
         </FullLayout>
     );

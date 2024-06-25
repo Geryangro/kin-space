@@ -4,7 +4,7 @@ import FooterPage from './FooterPage';
 
 const FullLayout = ({ children }) => {
   return (
-    <div className="flex flex-col h-screen justify-between select-none">
+    <div className="flex flex-col h-screen justify-between">
       <HeaderPage />
       <div className="flex w-full h-full">{children}</div>
       <FooterPage />

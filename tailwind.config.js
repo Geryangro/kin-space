@@ -33,6 +33,7 @@ module.exports = {
       colors: {
         kin: {
           text: '#908572',
+          textdark: '#766850',
           textsecondary: '#FCF2E9'
         },
         primary: {

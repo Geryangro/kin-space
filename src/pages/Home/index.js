@@ -22,9 +22,11 @@ const Home = () => {
                     <h1 className="font-basicbold text-3xl text-kin-text lg:max-w-2xl md:max-w-lg max-w-xs leading-[normal] animate__animated animate__fadeInUp">
                         Inspiring Young Minds Through Play
                     </h1>
-                    <button className="mt-3 md:py-1.5 py-2 px-3.5 bg-primary-main text-white rounded-3xl text-sm mx-auto">
-                        LEARN MORE
-                    </button>
+                    <a href="/about">
+                        <button className="mt-3 md:py-1.5 py-2 px-3.5 bg-primary-main text-white rounded-3xl text-sm mx-auto">
+                            LEARN MORE
+                        </button>
+                    </a>
                 </div>
                 <div className="absolute bottom-0 left-0">
                     <div className="w-full h-full overflow-hidden">
@@ -33,7 +35,7 @@ const Home = () => {
                 </div>
                 <div className="absolute md:block lg:hidden hidden right-0 bottom-[20px]">
                     <div className="w-full h-full overflow-hidden">
-                        <img className="h-[270px] w-auto animate__animated animate__fadeInRight animate__slow" src="kin/assest/fish2.png" alt="" />
+                        <img className="h-[270px] w-auto animate__animated animate__fadeInRight animate__slow" src="kin/assest/fish3.png" alt="" />
                     </div>
                 </div>
                 <div className="absolute bottom-0 xl:right-[350px] lg:right-[80px] lg:block md:hidden hidden">

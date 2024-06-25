@@ -13,7 +13,7 @@ export default function FooterPage() {
             </a>
           </div>
         </div>
-        <div className="flex flex-row justify-around gap-2 text-kin-text">
+        <div className="flex flex-row items-center justify-around gap-2 text-kin-text">
           {FooterNavigation.social.map((item, idx) => {
             return (
               <a href={item.href} key={idx}>
